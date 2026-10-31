@@ -37,12 +37,12 @@ public class PlayerController : MonoBehaviour {
             Vector3 pos;
             if (child.position.x == 0)
             {
-                pos = shipDesign.transform.FindChild("Center Engine").position;
+                pos = shipDesign.transform.Find("Center Engine").position;
             } else if (child.position.x < 0)
             {
-                pos = shipDesign.transform.FindChild("Left Engine").position;
+                pos = shipDesign.transform.Find("Left Engine").position;
             } else {
-                pos = shipDesign.transform.FindChild("Right Engine").position;
+                pos = shipDesign.transform.Find("Right Engine").position;
             }
             GameObject go = Instantiate(child.gameObject,
             pos + transform.position, Quaternion.identity) as GameObject;
